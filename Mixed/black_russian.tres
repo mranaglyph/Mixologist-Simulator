@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://bgedq4guo02of"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_fwwlr"]
+
+[resource]
+script = ExtResource("1_fwwlr")
+drink_name = "Black Russian"
+ingredients = Array[String](["vodka", "coffee-liqueur"])
+glass_type = "old-fashioned"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

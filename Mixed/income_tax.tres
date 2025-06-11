@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://dqf7o2lt8klds"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_q2vu6"]
+
+[resource]
+script = ExtResource("1_q2vu6")
+drink_name = "Income Tax"
+ingredients = Array[String](["gin", "dry-wine", "sweet-wine", "orange-juice", "spicy-bitters", "orange"])
+glass_type = "cocktail"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

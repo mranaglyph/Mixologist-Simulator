@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://0xipbpsq2wma"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_i5s8h"]
+
+[resource]
+script = ExtResource("1_i5s8h")
+drink_name = "Aperol Spritz"
+ingredients = Array[String](["dry-wine", "sparkling-water", "fruit-bitters", "orange"])
+glass_type = "wine"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

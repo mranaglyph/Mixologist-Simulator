@@ -1,0 +1,152 @@
+[gd_scene load_steps=13 format=3 uid="uid://bwryg7wbcdkf5"]
+
+[ext_resource type="Script" uid="uid://ce6oyx3hdpo4l" path="res://Scripts/main.gd" id="1_bo1nx"]
+[ext_resource type="Script" uid="uid://b8qqbgk21stkf" path="res://Scripts/input.gd" id="2_8gbba"]
+[ext_resource type="Script" uid="uid://bkwiqgntvlcv4" path="res://Scripts/parser.gd" id="2_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://ca4i0dhun240a" path="res://Scenes/image_gen.tscn" id="4_jjvhh"]
+[ext_resource type="PackedScene" uid="uid://d4glutyjcsr6m" path="res://Scenes/npc_gen.tscn" id="5_344ge"]
+[ext_resource type="Script" uid="uid://c2fm6iqy5hspn" path="res://Scripts/info_header.gd" id="5_kry3j"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2poj3"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebmjs"]
+bg_color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qxrlw"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ebmjs"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2poj3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jjvhh"]
+bg_color = Color(0.156863, 0.156863, 0.156863, 1)
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bo1nx")
+
+[node name="Parser" type="Node" parent="."]
+script = ExtResource("2_jjvhh")
+
+[node name="BKGD" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2poj3")
+
+[node name="MarginContainer" type="MarginContainer" parent="BKGD"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBox1" type="HBoxContainer" parent="BKGD/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="VBox1" type="VBoxContainer" parent="BKGD/MarginContainer/HBox1"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 20
+
+[node name="TextDisplay" type="PanelContainer" parent="BKGD/MarginContainer/HBox1/VBox1"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_ebmjs")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="BKGD/MarginContainer/HBox1/VBox1/TextDisplay"]
+unique_name_in_owner = true
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBox2" type="VBoxContainer" parent="BKGD/MarginContainer/HBox1/VBox1/TextDisplay/ScrollContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="InputArea" type="PanelContainer" parent="BKGD/MarginContainer/HBox1/VBox1"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_qxrlw")
+
+[node name="HBox2" type="HBoxContainer" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea"]
+layout_mode = 2
+
+[node name="Indicator" type="Label" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2"]
+layout_mode = 2
+text = "Request: "
+
+[node name="Input" type="LineEdit" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ebmjs")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_2poj3")
+max_length = 31
+script = ExtResource("2_8gbba")
+
+[node name="ImageDisplay" type="PanelContainer" parent="BKGD/MarginContainer/HBox1"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_jjvhh")
+
+[node name="ImageGen" parent="BKGD/MarginContainer/HBox1/ImageDisplay" instance=ExtResource("4_jjvhh")]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(-566, 0)
+
+[node name="NPCGen" parent="BKGD/MarginContainer/HBox1/ImageDisplay" instance=ExtResource("5_344ge")]
+position = Vector2(269, -274)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+offset_left = 586.0
+offset_top = 20.0
+offset_right = 1132.0
+offset_bottom = 628.0
+
+[node name="InfoHeader" type="HBoxContainer" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+script = ExtResource("5_kry3j")
+
+[node name="NightLabel" type="Label" parent="MarginContainer/InfoHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "N: "
+
+[node name="TimeLabel" type="Label" parent="MarginContainer/InfoHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "T: "
+
+[node name="NextCust" type="Label" parent="MarginContainer/InfoHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Cust: "
+
+[node name="CustHelped" type="Label" parent="MarginContainer/InfoHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Helped: "
+
+[connection signal="focus_entered" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" method="_on_focus_entered"]
+[connection signal="focus_exited" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" method="_on_focus_exited"]
+[connection signal="text_submitted" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="." method="_on_input_text_submitted"]
+[connection signal="text_submitted" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" method="_on_text_submitted"]

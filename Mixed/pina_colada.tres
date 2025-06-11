@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://p7i1bkpvxpha"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_hfamj"]
+
+[resource]
+script = ExtResource("1_hfamj")
+drink_name = "Pina Colada"
+ingredients = Array[String](["coconut-milk", "pineapple-juice", "rum", "sugar"])
+glass_type = "poco-grande"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

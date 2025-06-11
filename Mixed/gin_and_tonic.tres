@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://bpgv7otkd007v"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_8sdyq"]
+
+[resource]
+script = ExtResource("1_8sdyq")
+drink_name = "Gin and Tonic"
+ingredients = Array[String](["gin", "tonic-water", "lime"])
+glass_type = "highball"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

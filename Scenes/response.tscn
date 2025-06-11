@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c11ksinc35dps"]
+
+[ext_resource type="Script" uid="uid://crkenv6ehime7" path="res://Scripts/resp.gd" id="1_6xqyq"]
+[ext_resource type="PackedScene" uid="uid://cs3m1600syc7d" path="res://Scenes/resp.tscn" id="3_tjvil"]
+
+[node name="Response" type="VBoxContainer"]
+offset_right = 1.0
+offset_bottom = 23.0
+theme_override_constants/separation = 0
+script = ExtResource("1_6xqyq")
+
+[node name="Res" parent="." instance=ExtResource("3_tjvil")]
+custom_minimum_size = Vector2(1, 1)
+layout_mode = 2

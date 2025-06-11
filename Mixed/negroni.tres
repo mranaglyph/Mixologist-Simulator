@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://bcoud537fj1do"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_swd8q"]
+
+[resource]
+script = ExtResource("1_swd8q")
+drink_name = "Negroni"
+ingredients = Array[String](["dry-wine", "sweet-wine", "gin", "orange"])
+glass_type = "old-fashioned"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

@@ -1,0 +1,4 @@
+[gd_scene format=3 uid="uid://cs3m1600syc7d"]
+
+[node name="Res" type="Label"]
+autowrap_mode = 2

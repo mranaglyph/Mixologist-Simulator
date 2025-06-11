@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://besqsuvu3mmxb"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_vxlla"]
+
+[resource]
+script = ExtResource("1_vxlla")
+drink_name = "French 75"
+ingredients = Array[String](["gin", "lemon-juice", "simple-syrup", "sparkling-wine", "lemon"])
+glass_type = "champagne-flute"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

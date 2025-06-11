@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://kvenxlpusa0t"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_05qjr"]
+
+[resource]
+script = ExtResource("1_05qjr")
+drink_name = "Mimosa"
+ingredients = Array[String](["sparkling-wine", "orange-juice", "pineapple-juice", "vodka"])
+glass_type = "champagne-flute"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

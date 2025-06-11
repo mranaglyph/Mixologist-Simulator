@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://bh1xq6g12qqet"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_lrxs2"]
+
+[resource]
+script = ExtResource("1_lrxs2")
+drink_name = "Old Cuban"
+ingredients = Array[String](["floral-bitters", "herbal-bitters", "sparkling-wine", "mint-leaves", "lime-juice", "simple-syrup", "rum"])
+glass_type = "coupe"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

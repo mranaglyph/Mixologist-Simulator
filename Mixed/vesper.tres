@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://blq3c6b5ckj80"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_gmmdw"]
+
+[resource]
+script = ExtResource("1_gmmdw")
+drink_name = "Vesper"
+ingredients = Array[String](["gin", "vodka", "sweet-wine", "lemon"])
+glass_type = "champagne-coupe"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

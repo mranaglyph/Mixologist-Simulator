@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://bypxc42o6r8qc"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_t4m32"]
+
+[resource]
+script = ExtResource("1_t4m32")
+drink_name = "Martinez"
+ingredients = Array[String](["gin", "sweet-wine", "berry-liqueur", "floral-bitters", "orange"])
+glass_type = "martini"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

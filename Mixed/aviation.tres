@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://b8dlve2wuloc4"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_1qqeg"]
+
+[resource]
+script = ExtResource("1_1qqeg")
+drink_name = "Aviation"
+ingredients = Array[String](["gin", "berry-liqueur", "creme-liqueur", "cherry", "lemon-juice"])
+glass_type = "cocktail"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

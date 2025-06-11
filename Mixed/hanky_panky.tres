@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://qvjft57l7imh"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_rhti5"]
+
+[resource]
+script = ExtResource("1_rhti5")
+drink_name = "Hanky Panky"
+ingredients = Array[String](["gin", "sweet-wine", "herbal-liqueur", "orange"])
+glass_type = "martini"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://b8r03ej3fmnse"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_7ey46"]
+
+[resource]
+script = ExtResource("1_7ey46")
+drink_name = "Dark and Stormy"
+ingredients = Array[String](["beer", "rum"])
+glass_type = "highball"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

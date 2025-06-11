@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://bu3t071ri10jb"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_4ynao"]
+
+[resource]
+script = ExtResource("1_4ynao")
+drink_name = "Sazerac"
+ingredients = Array[String](["fruit-bitters", "vegetable-bitters", "sugar", "whiskey", "lemon"])
+glass_type = "old-fashioned"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

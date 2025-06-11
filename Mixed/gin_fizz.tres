@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://fsocyul81edv"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_tb1tj"]
+
+[resource]
+script = ExtResource("1_tb1tj")
+drink_name = "Gin Fizz"
+ingredients = Array[String](["gin", "lemon-juice", "simple-syrup", "egg", "club-soda"])
+glass_type = "highball"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

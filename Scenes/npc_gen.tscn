@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://d4glutyjcsr6m"]
+
+[ext_resource type="Script" uid="uid://d2vbquhyhusah" path="res://Scripts/npc_gen.gd" id="1_5j4t4"]
+[ext_resource type="Texture2D" uid="uid://bugorxan7bh1c" path="res://icon.svg" id="2_csdgb"]
+[ext_resource type="Script" uid="uid://ij1kqtbgli5" path="res://Scripts/npc_dialog.gd" id="3_csdgb"]
+
+[node name="NPCGen" type="Node2D"]
+script = ExtResource("1_5j4t4")
+
+[node name="NPCImage" type="Sprite2D" parent="."]
+texture = ExtResource("2_csdgb")
+script = ExtResource("3_csdgb")
+
+[node name="NPCEmotion" type="Sprite2D" parent="."]

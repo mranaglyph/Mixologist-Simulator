@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://e50noq0ydlt3"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_y3gg0"]
+
+[resource]
+script = ExtResource("1_y3gg0")
+drink_name = "Painkiller"
+ingredients = Array[String](["rum", "pineapple-juice", "orange-juice", "coconut-milk", "nutmeg", "pineapple"])
+glass_type = "hurricane"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

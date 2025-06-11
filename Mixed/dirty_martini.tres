@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://ddvy4c8g7uo8d"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_ytoge"]
+
+[resource]
+script = ExtResource("1_ytoge")
+drink_name = "Dirty Martini"
+ingredients = Array[String](["gin", "dry-wine", "olive", "olive-brine"])
+glass_type = "martini"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

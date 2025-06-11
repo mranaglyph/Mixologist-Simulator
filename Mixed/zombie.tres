@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://cstw4rnjyx4pf"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_t6hy6"]
+
+[resource]
+script = ExtResource("1_t6hy6")
+drink_name = "Zombie"
+ingredients = Array[String](["cherry", "brandy", "rum", "lime-juice", "pineapple-juice", "sugar", "simple-syrup"])
+glass_type = "zombie"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

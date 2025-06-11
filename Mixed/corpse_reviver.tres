@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://drkc3nhcmnbec"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_efbfo"]
+
+[resource]
+script = ExtResource("1_efbfo")
+drink_name = "Corpse Reviver"
+ingredients = Array[String](["gin", "floral-bitters", "flower-liqueur", "dry-wine", "fruit-liqueur", "lemon-juice", "cherry"])
+glass_type = "cocktail"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

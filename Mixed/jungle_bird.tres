@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="MixedDrinks" load_steps=2 format=3 uid="uid://4hn00sp1eeav"]
+
+[ext_resource type="Script" uid="uid://dqkwbcfrnbq6s" path="res://Mixed/mixed_drinks.gd" id="1_0mc0t"]
+
+[resource]
+script = ExtResource("1_0mc0t")
+drink_name = "Jungle Bird"
+ingredients = Array[String](["rum", "fruit-bitters", "simple-syrup", "pineapple-juice", "lime-juice", "pineapple"])
+glass_type = "old-fashioned"
+metadata/_custom_type_script = "uid://dqkwbcfrnbq6s"

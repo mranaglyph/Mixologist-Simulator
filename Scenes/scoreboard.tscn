@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://hk8mxshvmu3"]
+
+[ext_resource type="Script" uid="uid://c6xro8vmk2s4" path="res://Scripts/scoreboard_text.gd" id="2_7bodn"]
+[ext_resource type="Script" uid="uid://q85ypyomuq52" path="res://Scripts/next_night.gd" id="2_dlyme"]
+
+[node name="Scoreboard" type="Node2D"]
+
+[node name="ScoreboardText" type="RichTextLabel" parent="."]
+offset_right = 965.0
+offset_bottom = 374.0
+text = "Scores: "
+script = ExtResource("2_7bodn")
+
+[node name="NextNight" type="Button" parent="."]
+offset_left = 1048.0
+offset_top = 607.0
+offset_right = 1140.0
+offset_bottom = 638.0
+text = "Next Night"
+script = ExtResource("2_dlyme")
+
+[connection signal="pressed" from="NextNight" to="NextNight" method="_on_pressed"]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmmvqbyg8ub30"]
+
+[ext_resource type="Script" uid="uid://c1tlfhodm5l62" path="res://Scripts/final_scoreboard_text.gd" id="1_xlce3"]
+
+[node name="ScoreboardFinal" type="Node2D"]
+
+[node name="ScoreboardFinalText" type="RichTextLabel" parent="."]
+offset_right = 965.0
+offset_bottom = 374.0
+text = "Scores: "
+script = ExtResource("1_xlce3")
