@@ -444,7 +444,6 @@ func mix_custom_process():
 func serve_customer():
 	var info_header_ref = %InfoHeader
 	if info_header_ref.cust_waiting && info_header_ref.time_flag && info_header_ref.night_start:
-		cust_helped = true
 		var cust_request_raw = npc_dialog_ref.drink
 		var cust_request_raw_list = cust_request_raw.split(" ", false)
 		var cust_request = ""
@@ -462,6 +461,7 @@ func serve_customer():
 				npc_dialog_ref.texture = null
 				image_gen_ref.clear_image("any")
 				global.drinks_made.append(cust_request_raw)
+				cust_helped = true
 				return "The customer took the %s." % cust_request_raw
 			else:
 				var mix_drink_txt = mixed_drink_held
@@ -471,6 +471,7 @@ func serve_customer():
 				npc_dialog_ref.texture = null
 				image_gen_ref.clear_image("any")
 				global.drinks_made.append(mix_drink_txt)
+				cust_helped = true
 				return "You gave the customer a %s, which they didn't ask for..." % mix_drink_txt
 		else:
 			if cust_request in holding_list:
@@ -479,8 +480,11 @@ func serve_customer():
 				npc_dialog_ref.texture = null
 				image_gen_ref.clear_image("any")
 				global.drinks_made.append(cust_request_raw)
+				cust_helped = true
 				return "The customer took the %s." % cust_request_raw
 			else:
+				cust_helped = false
 				return "You're not holding a %s." % cust_request_raw
 	else:
-		return "There is nobody to serve this drink to."
+		cust_helped = false
+		return "There is nobody to serve a drink to."
