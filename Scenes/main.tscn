@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bwryg7wbcdkf5"]
+[gd_scene load_steps=14 format=3 uid="uid://bwryg7wbcdkf5"]
 
 [ext_resource type="Script" uid="uid://ce6oyx3hdpo4l" path="res://Scripts/main.gd" id="1_bo1nx"]
 [ext_resource type="Script" uid="uid://b8qqbgk21stkf" path="res://Scripts/input.gd" id="2_8gbba"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ca4i0dhun240a" path="res://Scenes/image_gen.tscn" id="4_jjvhh"]
 [ext_resource type="PackedScene" uid="uid://d4glutyjcsr6m" path="res://Scenes/npc_gen.tscn" id="5_344ge"]
 [ext_resource type="Script" uid="uid://c2fm6iqy5hspn" path="res://Scripts/info_header.gd" id="5_kry3j"]
+[ext_resource type="PackedScene" uid="uid://dq4uyy5wfpiia" path="res://Scenes/drink_text.tscn" id="6_6bp64"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2poj3"]
 bg_color = Color(0.176471, 0.176471, 0.176471, 1)
@@ -99,6 +100,22 @@ theme_override_styles/normal = SubResource("StyleBoxEmpty_2poj3")
 max_length = 31
 script = ExtResource("2_8gbba")
 
+[node name="HoldingButton" type="Button" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2"]
+layout_mode = 2
+text = "Holding"
+
+[node name="GetButton" type="Button" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2"]
+layout_mode = 2
+text = "Get"
+
+[node name="DropButton" type="Button" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2"]
+layout_mode = 2
+text = "Drop"
+
+[node name="MixButton" type="Button" parent="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2"]
+layout_mode = 2
+text = "Mix"
+
 [node name="ImageDisplay" type="PanelContainer" parent="BKGD/MarginContainer/HBox1"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -146,7 +163,18 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Helped: "
 
+[node name="DrinkText" parent="." instance=ExtResource("6_6bp64")]
+layout_mode = 0
+offset_left = 589.0
+offset_top = 574.0
+offset_right = 1129.0
+offset_bottom = 624.0
+
 [connection signal="focus_entered" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" method="_on_focus_entered"]
 [connection signal="focus_exited" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" method="_on_focus_exited"]
 [connection signal="text_submitted" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="." method="_on_input_text_submitted"]
 [connection signal="text_submitted" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" to="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/Input" method="_on_text_submitted"]
+[connection signal="pressed" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/HoldingButton" to="." method="_on_holding_button_pressed"]
+[connection signal="pressed" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/GetButton" to="." method="_on_get_button_pressed"]
+[connection signal="pressed" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/DropButton" to="." method="_on_drop_button_pressed"]
+[connection signal="pressed" from="BKGD/MarginContainer/HBox1/VBox1/InputArea/HBox2/MixButton" to="." method="_on_mix_button_pressed"]

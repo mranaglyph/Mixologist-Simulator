@@ -56,11 +56,13 @@ func drink_selection_and_dialog():
 			intro = dialog_intro()
 			drink = select_single_item()
 			outro = dialog_outro()
+			global.drink_expected = drink
 			return "%s %s %s" % [intro, drink, outro]
 		"mixed":
 			intro = dialog_intro()
 			drink = select_mixed_drink()
 			outro = dialog_outro()
+			global.drink_expected = drink
 			return "%s %s %s" % [intro, drink, outro]
 		#"custom":
 			#intro = dialog_intro()
@@ -74,6 +76,13 @@ func select_single_item():
 	
 func select_mixed_drink():
 	var random_index = randi_range(0, Inventory.tres.size() - 1)
+	
+	for i in range(0, Inventory.tres[random_index].ingredients.size()):
+		if i + 1 == Inventory.tres[random_index].ingredients.size():
+			global.drink_exp_ing += Inventory.tres[random_index].ingredients[i]
+		else:
+			global.drink_exp_ing += Inventory.tres[random_index].ingredients[i] + ", "
+	
 	return Inventory.tres[random_index].drink_name
 
 #func select_custom_drink():

@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dq4uyy5wfpiia"]
+
+[ext_resource type="Script" uid="uid://cerjsx0cy8yn8" path="res://Scripts/drink_text.gd" id="1_ave0w"]
+
+[node name="DrinkText" type="RichTextLabel"]
+offset_right = 540.0
+offset_bottom = 50.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ave0w")

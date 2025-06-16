@@ -1,6 +1,12 @@
 extends Button
 
 func _on_pressed():
+	global.get_msg = ""
+	global.drink_expected = ""
+	global.drink_exp_ing = ""
+	global.cust_spawned = false
+	global.drop_list = []
+	global.drop_msg = ""
 	reset_new_night()
 
 func reset_new_night():

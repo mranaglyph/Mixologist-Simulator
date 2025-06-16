@@ -58,8 +58,12 @@ func _process(_delta):
 			main_ref._on_input_text_submitted(npc_dialog)
 			
 			spawned_npc = true
+			global.cust_spawned = true
 			
 		if parser_ref.cust_helped == true:
+			global.drink_expected = ""
+			global.drink_exp_ing = ""
+			global.cust_spawned = false
 			spawned_npc = false
 			cust_waiting = false
 			parser_ref.cust_helped = false
@@ -69,6 +73,7 @@ func _process(_delta):
 			main_ref._on_input_text_submitted("controller-request-scoreboard")
 		elif hrs == 2 && am_pm == "am" && Nights.tonight == Nights.worknight.Saturday:
 			main_ref._on_input_text_submitted("controller-request-scoreboard-final")
+
 func clock():
 	clock_time = accel_clock
 	if parser_ref.manual_open || !night_start || (hrs == 2 && am_pm == "am"):
@@ -117,7 +122,7 @@ func get_next_cust_time():
 		"Tuesday":
 			if !cust_waiting:
 				if (time_remaining_cust < tue_night):
-					msg = "|Cust: %d|" % ((tue_night - time_remaining_cust) / 60)
+					msg = "|Cust: %ds|" % ((tue_night - time_remaining_cust) / 60)
 					time_remaining_cust += 1
 				elif (time_remaining_cust >= tue_night):
 					cust_waiting = true
@@ -128,7 +133,7 @@ func get_next_cust_time():
 		"Wednesday":
 			if !cust_waiting:
 				if (time_remaining_cust < wed_night):
-					msg = "|Cust: %d|" % ((wed_night - time_remaining_cust) / 60)
+					msg = "|Cust: %ds|" % ((wed_night - time_remaining_cust) / 60)
 					time_remaining_cust += 1
 				elif (time_remaining_cust >= wed_night):
 					cust_waiting = true
@@ -139,7 +144,7 @@ func get_next_cust_time():
 		"Thursday":
 			if !cust_waiting:
 				if (time_remaining_cust < thr_night):
-					msg = "|Cust: %d|" % ((thr_night - time_remaining_cust) / 60)
+					msg = "|Cust: %ds|" % ((thr_night - time_remaining_cust) / 60)
 					time_remaining_cust += 1
 				elif (time_remaining_cust >= thr_night):
 					cust_waiting = true
@@ -150,7 +155,7 @@ func get_next_cust_time():
 		"Friday":
 			if !cust_waiting:
 				if (time_remaining_cust < fri_night):
-					msg = "|Cust: %d|" % ((fri_night - time_remaining_cust) / 60)
+					msg = "|Cust: %ds|" % ((fri_night - time_remaining_cust) / 60)
 					time_remaining_cust += 1
 				elif (time_remaining_cust >= fri_night):
 					cust_waiting = true
@@ -161,7 +166,7 @@ func get_next_cust_time():
 		"Saturday":
 			if !cust_waiting:
 				if (time_remaining_cust < sat_night):
-					msg = "|Cust: %d|" % ((sat_night - time_remaining_cust) / 60)
+					msg = "|Cust: %ds|" % ((sat_night - time_remaining_cust) / 60)
 					time_remaining_cust += 1
 				elif (time_remaining_cust >= sat_night):
 					cust_waiting = true

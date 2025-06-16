@@ -118,8 +118,9 @@ static func load_inventory():
 		for i in ingredient_name:
 			inventory.append(i)
 		
-	unique_inventory(inventory)
-
+	var unq_inv = unique_inventory(inventory)
+	return unq_inv
+	
 static func unique_inventory(inventory_name):
 	var removed_duplicates = []
 	for i in inventory_name:
@@ -130,6 +131,8 @@ static func unique_inventory(inventory_name):
 	
 	for element in removed_duplicates:
 		inventory_name.append(element)
+		
+	return inventory_name
 
 static func list_inventory() -> String:
 	if inventory.size() == 0:

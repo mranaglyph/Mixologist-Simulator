@@ -5,6 +5,7 @@ extends Node
 @onready var npc_image_ref = $"../BKGD/MarginContainer/HBox1/ImageDisplay/NPCGen"
 @onready var npc_dialog_ref = npc_image_ref.get_node("NPCImage")
 @onready var time_ref = %TimeLabel
+@onready var main_ref = $".."
 
 var tres_ref = Inventory.tres
 
@@ -15,6 +16,12 @@ var holding_mixed_drink = false
 var holding_ingredients = ""
 var manual_open = false
 var cust_helped = false
+
+func _ready():
+	global.drop_list = holding_list
+
+func _process(_delta):
+	global.drop_list = holding_list
 
 func command(phrase: String):
 	var word_param = ""
@@ -64,7 +71,7 @@ func command(phrase: String):
 			else: return "Close Mixology Manual first."
 		
 		"get":
-			if !manual_open:
+			if !manual_open: 
 				return get_item(word_param)
 			else: return "Close Mixology Manual first."
 		
