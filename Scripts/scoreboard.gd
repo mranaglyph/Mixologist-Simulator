@@ -23,3 +23,4 @@ static var drink_exp_ing = ""
 static var cust_spawned = false
 static var drop_list = []
 static var drop_msg = ""
+static var inv = []
