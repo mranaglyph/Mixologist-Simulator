@@ -83,10 +83,10 @@ func clock():
 		time_flag = false
 		clock_text = "|Time: Pause|"
 		
-		if cust_clock[0] != "|Cust Wait|":
-			cust_clock[0] = "|Cust In: Pause|"
+		if cust_clock[0] != "|Cust: Wait|":
+			cust_clock[0] = "|Cust: Pause|"
 		else:
-			cust_clock[0] = "|Cust Wait|"
+			cust_clock[0] = "|Cust: Wait|"
 		
 		var return_arr = [clock_text, cust_clock]
 		return return_arr
@@ -130,7 +130,7 @@ func get_next_cust_time():
 				elif (time_remaining_cust >= tue_night):
 					cust_waiting = true
 			else:
-				msg = "|Cust Wait|"
+				msg = "|Cust: Wait|"
 				time_remaining_cust = 0
 				global.drink_timer += 1
 		"Wednesday":
@@ -141,7 +141,7 @@ func get_next_cust_time():
 				elif (time_remaining_cust >= wed_night):
 					cust_waiting = true
 			else:
-				msg = "|Cust Wait|"
+				msg = "|Cust: Wait|"
 				time_remaining_cust = 0
 				global.drink_timer += 1
 		"Thursday":
@@ -152,7 +152,7 @@ func get_next_cust_time():
 				elif (time_remaining_cust >= thr_night):
 					cust_waiting = true
 			else:
-				msg = "|Cust Wait|"
+				msg = "|Cust: Wait|"
 				time_remaining_cust = 0
 				global.drink_timer += 1
 		"Friday":
@@ -163,7 +163,7 @@ func get_next_cust_time():
 				elif (time_remaining_cust >= fri_night):
 					cust_waiting = true
 			else:
-				msg = "|Cust Wait|"
+				msg = "|Cust: Wait|"
 				time_remaining_cust = 0
 				global.drink_timer += 1
 		"Saturday":
@@ -174,7 +174,7 @@ func get_next_cust_time():
 				elif (time_remaining_cust >= sat_night):
 					cust_waiting = true
 			else:
-				msg = "|Cust Wait|"
+				msg = "|Cust: Wait|"
 				time_remaining_cust = 0
 				global.drink_timer += 1
 			
