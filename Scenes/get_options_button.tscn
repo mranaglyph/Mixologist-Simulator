@@ -8,7 +8,7 @@ offset_bottom = 40.0
 
 [node name="OptionsButton" type="OptionButton" parent="."]
 layout_mode = 2
-button_pressed = true
+toggle_mode = false
 action_mode = 1
 allow_reselect = true
 script = ExtResource("1_mhrjs")
