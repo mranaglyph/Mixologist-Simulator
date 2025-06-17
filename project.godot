@@ -13,7 +13,12 @@ config_version=5
 config/name="Mixologist Simulator"
 run/main_scene="uid://bwryg7wbcdkf5"
 config/features=PackedStringArray("4.4", "Forward Plus")
+run/max_fps=60
 config/icon="res://icon.svg"
+
+[display]
+
+window/size/resizable=false
 
 [editor_plugins]
 
