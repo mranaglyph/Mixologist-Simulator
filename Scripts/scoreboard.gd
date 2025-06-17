@@ -5,11 +5,11 @@ static var drink_timer = 0
 static var drinks_made = []
 static var cust_helped = 0
 
-static var cust_count_tue = 4
-static var cust_count_wed = 5
-static var cust_count_thr = 6
-static var cust_count_fri = 7
-static var cust_count_sat = 8
+static var cust_count_tue = 7
+static var cust_count_wed = 9
+static var cust_count_thr = 11
+static var cust_count_fri = 13
+static var cust_count_sat = 15
 
 static var final_score_tue
 static var final_score_wed

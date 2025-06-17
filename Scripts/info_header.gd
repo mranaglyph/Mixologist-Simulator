@@ -11,11 +11,11 @@ extends Node
 @onready var fps_ref = %FPS
 
 const night_len_frames_total = 28800
-const tue_night = 2400
-const wed_night = 2250
-const thr_night = 2100
-const fri_night = 1950
-const sat_night = 1800
+const tue_night = 1300
+const wed_night = 1225
+const thr_night = 1150
+const fri_night = 1075
+const sat_night = 1000
 
 var night = Nights.night()
 
@@ -45,7 +45,7 @@ func _ready():
 	night_ref.text = "|N: %s|" % night_name_var
 
 func _process(_delta):
-	fps_ref.text = "FPS: %s" % str(int(Engine.get_frames_per_second()))
+	fps_ref.text = "|FPS: %s|" % str(int(Engine.get_frames_per_second()))
 	
 	if night_start && time_flag:
 		var time = clock()
@@ -71,7 +71,7 @@ func _process(_delta):
 			cust_waiting = false
 			parser_ref.cust_helped = false
 		
-		cust_helped_ref.text = "Helped: %s" % global.cust_helped
+		cust_helped_ref.text = "|Helped: %s|" % global.cust_helped
 		if hrs == 2 && am_pm == "am" && Nights.tonight != Nights.worknight.Saturday:
 			main_ref._on_input_text_submitted("controller-request-scoreboard")
 		elif hrs == 2 && am_pm == "am" && Nights.tonight == Nights.worknight.Saturday:

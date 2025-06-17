@@ -911,9 +911,7 @@ func spawn_image(image_ref):
 	scale = img_scale
 	
 	global_position.x = viewport.x * .75
-	global_position.y = viewport.y / 2
-	
-	$Image/AnimationPlayer.play("move_in")
+	global_position.y = viewport.y * .55
 	
 func generate_image_glass(image_request):
 	#Glasses
@@ -1032,7 +1030,5 @@ func spawn_image_glass(image_ref):
 	scale = img_scale_glass
 	
 	global_position.x = viewport.x * .75
-	global_position.y = viewport.y / 2
-	
-	$Image/AnimationPlayer.play("move_in")
+	global_position.y = viewport.y * .55
 	
