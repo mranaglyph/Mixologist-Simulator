@@ -163,6 +163,11 @@ unique_name_in_owner = true
 layout_mode = 2
 text = "Helped: "
 
+[node name="FPS" type="Label" parent="MarginContainer/InfoHeader"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "FPS:  "
+
 [node name="DrinkText" parent="." instance=ExtResource("6_6bp64")]
 layout_mode = 0
 offset_left = 589.0

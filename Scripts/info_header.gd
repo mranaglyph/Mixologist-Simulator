@@ -8,6 +8,7 @@ extends Node
 @onready var npc_gen_ref = $"../../BKGD/MarginContainer/HBox1/ImageDisplay/NPCGen"
 @onready var npc_image_ref = npc_gen_ref.get_node("NPCImage")
 @onready var main_ref = $"../.."
+@onready var fps_ref = %FPS
 
 const night_len_frames_total = 28800
 const tue_night = 2400
@@ -44,6 +45,8 @@ func _ready():
 	night_ref.text = "|N: %s|" % night_name_var
 
 func _process(_delta):
+	fps_ref.text = "FPS: %s" % str(int(Engine.get_frames_per_second()))
+	
 	if night_start && time_flag:
 		var time = clock()
 		time_ref.text = time[0]
